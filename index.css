@@ -589,8 +589,15 @@ button { cursor: pointer; font-family: var(--font-body); }
   }
 
   .hero-slide{
-    height:220px;
+    height: auto;
   }
+
+  .hero-slide img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
 
   .logo-text{
     font-size:16px;
