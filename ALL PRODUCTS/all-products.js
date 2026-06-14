@@ -1,3 +1,53 @@
+function initMobileMenu(){
+
+  const hamburger =
+    document.getElementById("hamburger");
+
+  const menu =
+    document.getElementById("main-menu");
+
+  const overlay =
+    document.getElementById("menu-overlay");
+
+  const closeBtn =
+    document.getElementById("close-menu");
+
+  if(hamburger){
+
+    hamburger.addEventListener("click",()=>{
+
+      menu.classList.add("active");
+      overlay.classList.add("active");
+
+    });
+
+  }
+
+  if(closeBtn){
+
+    closeBtn.addEventListener("click",()=>{
+
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+
+    });
+
+  }
+
+  if(overlay){
+
+    overlay.addEventListener("click",()=>{
+
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+
+    });
+
+  }
+
+}
+
+
 /* ── Cart Utilities ──────────────────────────────────────── */
 
 function getCart() {
@@ -296,6 +346,12 @@ function initFilterBar() {
   });
 }
 
+
+
+
+
+
+
 /* ── Smooth Scroll ───────────────────────────────────────── */
 
 function initSmoothScroll() {
@@ -324,3 +380,8 @@ document.addEventListener('DOMContentLoaded', function() {
   updateCartBadge();
 });
 
+document.addEventListener("DOMContentLoaded",()=>{
+
+  initMobileMenu();
+
+});
