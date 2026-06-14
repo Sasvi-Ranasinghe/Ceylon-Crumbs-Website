@@ -612,9 +612,139 @@ button { cursor: pointer; font-family: var(--font-body); }
 .social-links a { color: #C8B9A8; font-size: 13px; transition: color var(--trans); }
 .social-links a:hover { color: var(--gold); }
 
-/* Responsive */
-@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) {
-  .footer-grid { grid-template-columns: 1fr; }
-  .filter-btn  { font-size: 12px; padding: 5px 12px; }
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .products-grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-slide{
+    height:450px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  #announcement-bar{
+    font-size:14px;
+    padding:8px 12px;
+  }
+
+  .header-inner{
+    flex-wrap:wrap;
+    height:auto;
+    padding:12px 0;
+    gap:12px;
+  }
+
+  .logo img{
+    height:60px;
+  }
+
+  .logo-text{
+    font-size:18px;
+  }
+
+  /* NAVBAR WRAPS */
+  .desktop-nav{
+    width:100%;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
+  }
+
+  .desktop-nav > li > a{
+    font-size:12px;
+    padding:6px 8px;
+  }
+
+  .header-icons{
+    width:100%;
+    justify-content:center;
+    margin-left:0;
+  }
+
+  .products-grid{
+    grid-template-columns: repeat(2,1fr);
+    gap:14px;
+  }
+
+  .hero-slide{
+    height:320px;
+  }
+
+  .section-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+  .container{
+    width:95%;
+  }
+
+  .products-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-slide{
+    height: auto;
+  }
+
+  .hero-slide img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+  .logo-text{
+    font-size:16px;
+  }
+
+  .desktop-nav > li > a{
+    font-size:11px;
+    padding:5px 6px;
+  }
+
+  .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .footer-contact{
+    flex-direction:column;
+  }
+
+  .footer-contact a{
+    width:100%;
+    justify-content:center;
+  }
+
 }
