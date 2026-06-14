@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ceylon Crumbs</title>
+  <link rel="icon" href="../Home page Photos/Logo without Background.png" type="image/jpeg" />
+  <meta name="description" content="Order the finest cakes, gateaux, pastries, lamprais and more from Ceylon Crumbs" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../ALL PRODUCTS/all-prodcuts.css" />
+  <link rel="stylesheet" href="../CART/cart.css" />
+  <link rel="stylesheet" href="checkout.css" />
+
+</head>
+<body class="woocommerce-js">
+  
+  <div id="announcement-bar">
+  &nbsp; Free islandwide delivery on orders over Rs.&nbsp;10,000
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html" title="Ceylon Crumbs">
+          <img
+            src="../Home page Photos/LOGO.png"alt="Ceylon Crumbs logo"
+            onerror="this.style.display='none'"
+          />
+          <span class="logo-text">Ceylon <span>Crumbs</span></span>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main navigation">
+        <ul class="desktop-nav">
+
+          <li><a href="../index.html">Home</a></li>
+
+          <li class="has-dropdown">
+  <a href="../ALL PRODUCTS/all-products.html">All Products ▾</a>
+  <ul class="nav-dropdown">
+    <li><a href="../ALL PRODUCTS/all-products.html#savoury">Savoury</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#cake">Cake</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#gateau">Gateau</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#sweet">Sweet</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#lunch">Lunch</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#beverages">Beverages</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#cheesecake">Cheesecake and Bentocake</a></li>
+</li>
+</ul>
+        </li>
+          <li><a href="../ABOUT/about.html">About</a></li>
+          <li><a href="../OUTLETS/outlets.html">Outlets</a></li>
+          <li><a href="../CONTACT/contact.html">Contact</a></li>
+           <li><a href="../FAQ/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Icons -->
+      <div class="header-icons">
+
+        <!-- Search -->
+        <div class="search-wrap">
+          <button id="search-toggle" class="icon-btn" aria-label="Search">
+            <img src="../Home page Photos/Search Bar.png" alt="search" width="20" height="20" />
+          </button>
+          <div id="search-box" class="search-box">
+            <form action="../ALL PRODUCTS/all-products.html" method="get">
+              <div class="search-row">
+                <input type="search" name="s" placeholder="Search products…" />
+                <button type="submit">
+                  <img src="../Home page Photos/Search Bar.png" alt="search" width="16" height="16" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- My Account -->
+        <a href="../ACCOUNT/account.html" class="icon-btn" aria-label="My Account">
+          <img src="../Home page Photos/Login.png" alt="login" width="20" height="20" />
+        </a>
+
+        <!-- Cart (active page) -->
+          <a href="../CART/cart.html" class="icon-btn cart-icon-btn active-icon" aria-label="Cart">
+            <img src="../Home page Photos/images.png" alt="cart" width="20" height="20"
+                 onerror="this.outerHTML='🛒'" />
+            <span class="cart-badge cart-count" style="display:none;">0</span>
+          </a>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div id="menu-overlay"></div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Checkout</h1>
+      <p>Complete your order and enjoy your favourite treats.</p>
+      <p class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>»</span>
+        <a href="../CART/cart.html">Cart</a>
+        <span>»</span>
+        <strong>Checkout</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN ═══ -->
+  <main id="main">
+    <div class="container">
+
+      <!-- ── Empty Cart State ── -->
+      <div class="empty-checkout" id="emptyCheckout" style="display:none;">
+        <div class="empty-icon">🛒</div>
+        <h2>Your cart is empty.</h2>
+        <p>Add some delicious items before checking out.</p>
+        <a href="../ALL PRODUCTS/all-products.html" class="btn btn-primary">
+          Continue Shopping
+        </a>
+      </div>
+
+      <!-- ── Order Success ── -->
+      <div class="order-success" id="orderSuccess" style="display:none;">
+        <div class="success-animation">
+          <div class="success-circle">✓</div>
+        </div>
+        <h2>Order Placed Successfully!</h2>
+        <p>Thank you for your order. We will contact you shortly to confirm delivery details.</p>
+        <div class="success-order-id" id="successOrderId"></div>
+        <div class="success-actions">
+          <a href="../index.html" class="btn btn-primary">Back to Home</a>
+          <a href="../ALL PRODUCTS/all-products.html" class="btn btn-outline">Continue Shopping</a>
+        </div>
+      </div>
+
+      <!-- ── Checkout Layout ── -->
+      <div class="checkout-layout" id="checkoutLayout">
+
+        <!-- ════ LEFT: FORM ════ -->
+        <div class="checkout-form-section">
+
+          <!-- Billing Details -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <span class="form-card-icon">👤</span>
+              <h2>Billing Details</h2>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="fullName" placeholder="Your full name"
+                         autocomplete="name" required />
+                </div>
+                <span class="field-error" id="fullNameErr"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="tel" id="phone" placeholder="+94 77 000 0000"
+                         autocomplete="tel" required />
+                </div>
+                <span class="field-error" id="phoneErr"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="email" id="email" placeholder="hello@example.com"
+                       autocomplete="email" required />
+              </div>
+              <span class="field-error" id="emailErr"></span>
+            </div>
+          </div>
+
+          <!-- Delivery Address -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <span class="form-card-icon">📍</span>
+              <h2>Delivery Address</h2>
+            </div>
+
+            <div class="form-group">
+              <label for="address1">Address Line 1 <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="text" id="address1" placeholder="House/Flat number, Street name"
+                       autocomplete="address-line1" required />
+              </div>
+              <span class="field-error" id="address1Err"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="address2">Address Line 2 <span class="optional">(Optional)</span></label>
+              <div class="input-wrap">
+                <input type="text" id="address2" placeholder="Apartment, suite, etc."
+                       autocomplete="address-line2" />
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="city">City <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="city" placeholder="Colombo"
+                         autocomplete="address-level2" required />
+                </div>
+                <span class="field-error" id="cityErr"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="postalCode">Postal Code <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="postalCode" placeholder="00100"
+                         autocomplete="postal-code" required />
+                </div>
+                <span class="field-error" id="postalCodeErr"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="orderNotes">Order Notes <span class="optional">(Optional)</span></label>
+              <textarea id="orderNotes" rows="3"
+                placeholder="Special instructions, dietary requirements, preferred delivery time…"></textarea>
+            </div>
+          </div>
+
+          <!-- Payment Method -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <span class="form-card-icon">💳</span>
+              <h2>Payment Method</h2>
+            </div>
+
+            <div class="payment-options">
+
+              <label class="payment-option selected" id="codOption">
+                <input type="radio" name="payment" value="cod" checked />
+                <div class="payment-option-inner">
+                  <span class="payment-icon">💵</span>
+                  <div class="payment-info">
+                    <strong>Cash on Delivery</strong>
+                    <p>Pay when your order arrives</p>
+                  </div>
+                  <span class="payment-check">✓</span>
+                </div>
+              </label>
+
+              <label class="payment-option" id="cardOption">
+                <input type="radio" name="payment" value="card" />
+                <div class="payment-option-inner">
+                  <span class="payment-icon">💳</span>
+                  <div class="payment-info">
+                    <strong>Card Payment</strong>
+                    <img src="CP3.png" alt="payments" width="300" height="300">
+                    <p>Pay by Visa, MasterCard, AMEX, eZcash, mCash or Internet Banking via PayHere.</p>
+                  </div>
+                  <span class="payment-check">✓</span>
+                </div>
+              </label>
+
+            </div>
+
+            <!-- Card details panel (UI only) -->
+            <div class="card-details" id="cardDetails" style="display:none;">
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <div class="input-wrap">
+                  <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456"
+                         maxlength="19" />
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="cardExpiry">Expiry</label>
+                  <div class="input-wrap">
+                    <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="cardCvv">CVV</label>
+                  <div class="input-wrap">
+                    <input type="text" id="cardCvv" placeholder="123" maxlength="4" />
+                  </div>
+                </div>
+              </div>
+              <div class="card-secure-note">
+                🔒 Your card details are encrypted and secure
+              </div>
+            </div>
+
+          </div>
+
+        </div><!-- /.checkout-form-section -->
+
+        <!-- ════ RIGHT: ORDER SUMMARY ════ -->
+        <div class="order-summary-section">
+          <div class="order-summary-card" id="orderSummaryCard">
+
+            <div class="summary-title">
+              <h2>Order Summary</h2>
+              <a href="../CART/cart.html" class="edit-cart-link">Edit Cart</a>
+            </div>
+
+            <!-- Cart items list -->
+            <div class="summary-items" id="summaryItems">
+              <!-- Dynamically rendered by JS -->
+            </div>
+
+            <!-- Totals -->
+            <div class="summary-totals">
+              <div class="summary-row">
+                <span>Total Items</span>
+                <span id="summaryQty">0</span>
+              </div>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summarySubtotal">Rs. 0.00</span>
+              </div>
+              <div class="summary-delivery-note">
+                <span class="delivery-icon">🚚</span>
+                <p>Delivery charges will be confirmed based on your location.</p>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-row summary-total-row">
+                <span>Estimated Total</span>
+                <span id="summaryTotal">Rs. 0.00</span>
+              </div>
+            </div>
+
+            <!-- Place Order (desktop) -->
+            <button class="btn btn-primary btn-full" id="placeOrderDesktop">
+              Place Order →
+            </button>
+
+            <div class="summary-secure">
+              🔒 Secure checkout &nbsp;|&nbsp; SSL encrypted
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+    <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div>
+          <div class="footer-logo-text">
+            <img src="../Home page Photos/Logo without Background.png" alt="Ceylon Crumbs" width="60"
+                 onerror="this.style.display='none'" />
+            <span>Ceylon <span>Crumbs</span></span>
+          </div>
+          <p class="footer-about">
+            Ceylon Crumbs (Pvt) Ltd,<br />
+            29, Aththidiya Rd,<br />
+            Piliyandala 10390,<br />
+            Sri Lanka.
+          </p>
+          <div class="footer-contact">
+            <a href="tel:+94112058977" class="btn-call">📞 Call us</a>
+            <a href="mailto:hello@ceyloncrumbs.lk" class="btn-email">✉ Email</a>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../ABOUT/about.html">About Us</a></li>
+            <li><a href="../OUTLETS/outlets.html">Outlets</a></li>
+            <li><a href="../CONTACT/contact.html">Contact</a></li>
+            <li><a href="../FAQ/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- My Account -->
+        <div>
+          <h4>My Account</h4>
+          <ul>
+            <li><a href="../ACCOUNT/account.html">My Details</a></li>
+            <li><a href="../ACCOUNT/account.html">My Orders</a></li>
+            <li><a href="../CART/cart.html">My Cart</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+      <p>&copy; 2026 Ceylon Crumbs. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/"  target="_blank" rel="noopener nofollow" ><img src="../Home page Photos/FB logo.webp" alt="FB LOGO" width="35px" height="35px"></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener nofollow"><img src="../Home page Photos/IG LOGO.webp" alt="IG LOGO" width="35PX" height="35px"> </a>
+      </div>
+        <div>
+          <a href="terms.html" style="color:#7A6A5A;font-size:12px;margin-right:12px;">Terms</a>
+          <a href="privacy.html" style="color:#7A6A5A;font-size:12px;">Privacy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="cart-toast" role="status" aria-live="polite"></div>
+
+  <!-- Cart JS -->
+  <script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ceylon Crumbs</title>
+  <link rel="icon" href="Common Photos/Logo without Background.png" type="image/jpeg" />
+  <meta name="description" content="Order the finest cakes, gateaux, pastries, lamprais and more from Ceylon Crumbs" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="all-prodcuts.css" />
+
+</head>
+<body class="woocommerce-js">
+  
+  <div id="announcement-bar">
+  &nbsp; Free islandwide delivery on orders over Rs.&nbsp;10,000
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html" title="Ceylon Crumbs">
+          <img
+            src="../Home page Photos/LOGO.png"alt="Ceylon Crumbs logo"
+            onerror="this.style.display='none'"
+          />
+          <span class="logo-text">Ceylon <span>Crumbs</span></span>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main navigation">
+        <ul class="desktop-nav">
+
+          <li><a href="../index.html">Home</a></li>
+
+          <li class="has-dropdown active">
+            <a href="all-products.html">All Products ▾</a>
+            <ul class="nav-dropdown">
+             <li><a href="#savoury">Savoury</a></li>
+             <li><a href="#cake">Cake</a></li>
+             <li><a href="#gateau">Gateau</a></li>
+             <li><a href="#sweet">Sweet</a></li>
+             <li><a href="#lunch">Lunch</a></li>
+            <li><a href="#beverages">Beverages</a></li>
+            <li><a href="#cheesecake">Cheesecake and Bentocake</a></li>
+</ul>
+          </li>
+
+          <li><a href="../ABOUT/about.html">About</a></li>
+          <li><a href="../OUTLETS/outlets.html">Outlets</a></li>
+          <li><a href="../CONTACT/contact.html">Contact</a></li>
+           <li><a href="../FAQ/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Icons -->
+      <div class="header-icons">
+
+        <!-- Search -->
+        <div class="search-wrap">
+          <button id="search-toggle" class="icon-btn" aria-label="Search">
+            <img src="../Home page Photos/Search Bar.png" alt="search" width="20" height="20" />
+          </button>
+          <div id="search-box" class="search-box">
+            <form action="all-products.html" method="get">
+              <div class="search-row">
+                <input type="search" name="s" placeholder="Search products…" />
+                <button type="submit">
+                  <img src="../Home page Photos/Search Bar.png" alt="search" width="16" height="16" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- My Account -->
+        <a href="../ACCOUNT/account.html" class="icon-btn" aria-label="My Account">
+          <img src="../Home page Photos/Login.png" alt="login" width="20" height="20" />
+        </a>
+
+        <!-- Cart with badge -->
+        <a href="../CART/cart.html" class="icon-btn cart-icon-btn" aria-label="View cart" style="position:relative;">
+          <img src="../Home page Photos/images.png" alt="cart" width="20" height="20">
+
+          <!-- Badge updated dynamically via JS from localStorage -->
+          <span class="cart-badge cart-count" style="display:none;">0</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Overlay -->
+<div id="menu-overlay"></div>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div>
+        <h1>All Products</h1>
+        <p class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>»</span>
+          <strong>All Products</strong>
+        </p>
+      </div>
+      <!-- Sorting dropdown -->
+      <select class="sort-select" id="sort-select" onchange="sortProducts(this.value)">
+        <option value="default">Default sorting</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A–Z</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Bar -->
+<div class="filter-bar">
+  <div class="container">
+    <a href="#savoury"     class="filter-btn">Savoury</a>
+    <a href="#cake"        class="filter-btn">Cakes</a>
+    <a href="#gateau"      class="filter-btn">Gateaux</a>
+    <a href="#sweet"       class="filter-btn">Sweet</a>
+    <a href="#lunch"       class="filter-btn">Lunch</a>
+    <a href="#beverages"   class="filter-btn">Beverages</a>
+    <a href="#Cheesecakeandbentocake" class="filter-btn">Cheesecake and Bentocake</a>
+  </div>
+</div>
+<main id="main">
+
+  <!-- ── SAVOURY ── -->
+  <section id="savoury" class="category-anchor category-section" style="background:#faf4ec;">
+    <div class="container">
+      <div class="section-header"><h2>Savoury</h2></div>
+      <div class="products-grid">
+        <!-- Chicken -->
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 2.jpg" alt="Chicken Roll" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chicken Roll</p><div class="price-wrapper"><span class="price">Rs. 210.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="001">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 4.jpg" alt="Crispy Chicken Quiche" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Crispy Chicken Quiche</p><div class="price-wrapper"><span class="price">Rs. 200.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="002">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P21.jpg" alt="Chicken Patty" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chicken Patty</p><div class="price-wrapper"><span class="price">Rs. 190.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="003">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P22.jpg" alt="Chicken & Mushroom Pie" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chicken &amp; Mushroom Pie</p><div class="price-wrapper"><span class="price">Rs. 220.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="004">Add to cart</button></div></div>
+
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 5.jpg" alt="Fish Roll" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Fish Roll</p><div class="price-wrapper"><span class="price">Rs. 220.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="5480">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 3.jpg" alt="Coriander & Fish Pastry" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Coriander &amp; Fish Pastry</p><div class="price-wrapper"><span class="price">Rs. 190.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="005">Add to cart</button></div></div>
+
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P48.jpg" alt="Vegetable Quiche" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Vegetable Quiche</p><div class="price-wrapper"><span class="price">Rs. 180.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="006">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 8.jpg" alt="Vegetable Samosa" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Vegetable Samosa</p><div class="price-wrapper"><span class="price">Rs. 200.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="007">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P46.webp" alt="Garlic Bread" loading="lazy"/></div><div class="box-text text-center"><p class="product-titile">Garlic Bread</p><div class="price-wrapper"><span class="price">Rs.210.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="008">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P51.webp" alt="Stuffed Egg Bun" loading="lazy"/></div><div class="box-text text-center"><p class="product-titile">Stuffed Egg Bun</p><div class="price-wrapper"><span class="price">Rs.200.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="009">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P44.webp" alt="Cocktail Pastry Platter – Chicken 24 pcs" loading="lazy"/></div><div class="box-text text-center"><p class="product-titile">Cocktail Pastry Platter – Chicken 24 pcs</p><div class="price-wrapper"><span class="price">Rs.3,550.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="010">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P45.webp" alt="Cocktail Pastry Platter – Vegetarian 12 pcs" loading="lazy"/></div><div class="box-text text-center"><p class="product-titile">Cocktail Pastry Platter – Vegetarian 12 pcs</p><div class="price-wrapper"><span class="price">Rs.1650.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="011">Add to cart</button></div></div> 
+       </div>
+      </div>
+  </section>
+
+  <!-- ── CAKE ── -->
+  <section id="cake" class="category-anchor category-section" style="background:#fff;">
+    <div class="container">
+      <div class="section-header"><h2>Cakes</h2></div>
+      <div class="products-grid">
+        <div class="product-small box"><div class="badge-container"><div class="badge-inner on-sale">Sale!</div></div><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 6.webp" alt="Chocolate Fudge Cake" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chocolate Fudge Cake</p><div class="price-wrapper"><span class="price">Rs. 2,050.00 – Rs. 8,000.00</span>
+
+<div class="option-group" id="weight-group">
+  <label for="weight-select">Weight</label>
+
+  <select id="weight-select" class="option-select">
+    <option value="500g" data-price="2050">
+      500g — Rs. 2,050.00
+    </option>
+
+<option value="1kg" data-price="3800">
+  1kg — Rs. 3,800.00
+</option>
+
+<option value="2kg" data-price="6500">
+  2kg — Rs. 6,500.00
+</option>
+
+<option value="3kg" data-price="8000">
+  3kg — Rs. 8,000.00
+</option>
+  </select>
+</div>
+
+<div class="product-actions">
+
+  </div></div><button class="button primary is-small ajax_add_to_cart" data-product_id="012">Add to cart</button></div></div>
+        <div class="product-small box"><div class="badge-container"><div class="badge-inner on-sale">Sale!</div></div><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P32.jpg" alt="Coffee & Chocolate Fudge Cake" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Coffee &amp; Chocolate Fudge Cake</p><div class="price-wrapper"><span class="price">Rs. 2,200.00 – Rs. 8,200.00</span>
+<div class="option-group" id="weight-group">
+  <label for="weight-select">Weight</label>
+
+  <select id="weight-select" class="option-select">
+    <option value="500g" data-price="2200">
+      500g — Rs. 2,200.00
+    </option>
+
+<option value="1kg" data-price="3800">
+  1kg — Rs. 3,800.00
+</option>
+
+<option value="2kg" data-price="6500">
+  2kg — Rs. 6,500.00
+</option>
+
+<option value="3kg" data-price="8200">
+  3kg — Rs. 8,200.00
+</option>
+  </select>
+</div>
+
+<div class="product-actions">
+</div></div><button class="button primary is-small ajax_add_to_cart" data-product_id="013">Add to cart</button></div></div>
+      <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P35.jpg" alt="Butter Cake" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Butter Cake</p><div class="price-wrapper"><span class="price">Rs. 1,250.00 – Rs. 2,400.00</span>
+<div class="option-group" id="weight-group">
+  <label for="weight-select">Weight</label>
+
+  <select id="weight-select" class="option-select">
+    <option value="1kg" data-price="1250">
+      1kg — Rs. 1,250.00
+    </option>
+
+<option value="2kg" data-price="2400">
+  2kg — Rs. 2,400.00
+</option>
+  </select>
+</div>
+<div class="product-actions">
+</div></div><button class="button primary is-small ajax_add_to_cart" data-product_id="017">Add to cart</button></div></div>
+
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P36.webp" alt="Design Cake – Ribbon (DC-R-001)" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Design Cake – Ribbon (DC-R-001)</p><div class="price-wrapper"><span class="price">Rs. 3,600.00 - Rs.6,200.00 </span>
+        <div class="option-group" id="weight-group">
+  <label for="weight-select">Weight</label>
+
+  <select id="weight-select" class="option-select">
+    <option value="1KG" data-price="3600">
+      1kg — Rs. 3,600.00
+    </option>
+
+<option value="2kg" data-price="4800">
+  2kg — Rs. 4,800.00
+</option>
+
+<option value="3kg" data-price="6200">
+  3kg — Rs. 6,200.00
+</option>
+
+  </select>
+</div>
+  <div class="product-actions">
+</div></div><button class="button primary is-small ajax_add_to_cart" data-product_id="019">Add to cart</button></div></div>      
+        
+        
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P37.webp" alt="Design Cake – Chocolate (DC-R-002)" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Design Cake – Chocolate (DC-R-002)</p><div class="price-wrapper"><span class="price">Rs. 3,600.00 - Rs.6,200.00 </span>
+<div class="option-group" id="weight-group">
+  <label for="weight-select">Weight</label>
+
+  <select id="weight-select" class="option-select">
+    <option value="1KG" data-price="3600">
+      1kg — Rs. 3,600.00
+    </option>
+
+<option value="2kg" data-price="4800">
+  2kg — Rs. 4,800.00
+</option>
+
+<option value="3kg" data-price="6200">
+  3kg — Rs. 6,200.00
+</option>
+
+  </select>
+</div>
+  <div class="product-actions">
+</div></div><button class="button primary is-small ajax_add_to_cart" data-product_id="020">Add to cart</button></div></div>   
+
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P36.webp" alt="Design Cake – Ribbon (DC-R-001)" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Design Cake – Ribbon (DC-R-003)</p><div class="price-wrapper"><span class="price">Rs. 3,600.00 - Rs.6,200.00 </span>
+        <div class="option-group" id="weight-group">
+  <label for="weight-select">Weight</label>
+
+  <select id="weight-select" class="option-select">
+    <option value="1KG" data-price="3600">
+      1kg — Rs. 3,600.00
+    </option>
+
+<option value="2kg" data-price="4800">
+  2kg — Rs. 4,800.00
+</option>
+
+<option value="3kg" data-price="6200">
+  3kg — Rs. 6,200.00
+</option>
+
+  </select>
+</div>
+  <div class="product-actions">
+</div></div><button class="button primary is-small ajax_add_to_cart" data-product_id="021">Add to cart</button></div></div>   
+      </div>
+      </div>
+</section>
+  <section id="cakes" class="category-anchor category-section" style="background:#ffffff;">
+    <div class="container">
+      <div class="products-grid">
+<div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P40.webp" alt="Coffee Cake with Tiramisu" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Coffee Cake with Tiramisu</p><div class="price-wrapper"><span class="price">Rs. 6,500.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="018">Add to cart</button></div></div>
+<div class="product-small box"><div class="badge-container"><div class="badge-inner on-sale">Sale!</div></div><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P38.webp" alt="Classic Ribbon Cake with Chocolate Brownie" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Classic Ribbon Cake with Chocolate Brownie</p><div class="price-wrapper"><span class="price">Rs.5400 </span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="015">Add to cart</button></div></div>
+<div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P34.jpeg" alt="Love Cake" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Love Cake 400gr</p><div class="price-wrapper"><span class="price">Rs. 1,950.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="016">Add to cart</button></div></div>
+<div class="product-small box"><div class="badge-container"><div class="badge-inner on-sale">Sale!</div></div><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P39.webp" alt="Coffee & Cashew Cake – 1kg" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Coffee & Cashew Cake – 1kg</p><div class="price-wrapper"><span class="price">Rs.3,800</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="014">Add to cart</button></div></div>
+<div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 9.webp" alt="Ribbon Cake Slice" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Ribbon Cake Slice </p><div class="price-wrapper"><span class="price">Rs. 240.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="022">Add to cart</button></div></div>
+        </div>
+      </div>
+  </section>
+
+<!-- ── GATEAU ── -->
+  <section id="gateau" class="category-anchor category-section" style="background:#faf4ec;">
+    <div class="container">
+      <div class="section-header"><h2>Gateau</h2></div>
+      <div class="products-grid">
+
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/p20.png" alt="Espresso Dream – Thiramisu Gateau" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Espresso Dream – Thiramisu Gateau</p><div class="price-wrapper"><span class="price">Rs. 3,150.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="023">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P50.png" alt="Harmony Layers – Chocolate Opera Gateau" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Harmony Layers – Chocolate Opera Gateau</p><div class="price-wrapper"><span class="price">Rs. 3,650.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="024">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P49.png" alt="Infinite Rainbow – Rainbow Gateau" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Infinite Rainbow – Rainbow Gateau</p><div class="price-wrapper"><span class="price">Rs. 3,350.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="025">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P7.png" alt="Velvet Charm – Red Velvet Gateau" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Velvet Charm – Red Velvet Gateau</p><div class="price-wrapper"><span class="price">Rs. 3,650.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="026">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P18.webp" alt="Chocolate Gateau" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chocolate Gateau</p><div class="price-wrapper"><span class="price">Rs. 4,800.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="027">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P19.jpg" alt="Black Forest Gateau" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Black Forest Gateau</p><div class="price-wrapper"><span class="price">Rs. 5,700.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="028">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P11.webp" alt="Chocolate Pyramid Gateau Slice" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chocolate Pyramid Gateau Slice</p><div class="price-wrapper"><span class="price">Rs. 240.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="029">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P12.webp" alt="Strawberry Gateau Slice" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Strawberry Gateau Slice</p><div class="price-wrapper"><span class="price">Rs. 280.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="030">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P42.webp" alt="Crunchy Chocolate Gateau Slice" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Crunchy Chocolate Gateau Slice</p><div class="price-wrapper"><span class="price">Rs. 280.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="031">Add to cart</button></div></div>    
+       </div>
+      </div>
+  </section>
+
+   <!-- ── SWEET ── -->
+  <section id="sweet" class="category-anchor category-section" style="background:#fff;">
+    <div class="container">
+      <div class="section-header"><h2>Sweet</h2></div>
+      <div class="products-grid">
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P23.webp" alt="Chocolate Fudge Donut" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chocolate Fudge Donut</p><div class="price-wrapper"><span class="price">Rs. 260.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="032">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P24.png" alt="Chocolate Éclair" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chocolate Éclair</p><div class="price-wrapper"><span class="price">Rs. 270.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="033">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P27.jpg" alt="Strawberry Cream Donut" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Strawberry Cream Donut</p><div class="price-wrapper"><span class="price">Rs. 250.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="034">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P25.jpg" alt="Almond Tart" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Almond Tart</p><div class="price-wrapper"><span class="price">Rs. 300.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="5523">Add to cart</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LUNCH ── -->
+  <section id="lunch" class="category-anchor category-section" style="background:#faf4ec;">
+    <div class="container">
+      <div class="section-header"><h2>Lunch</h2></div>
+      <div class="products-grid">
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P 1.jpg" alt="Chicken Lamprais" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chicken Lamprais</p><div class="price-wrapper"><span class="price">Rs. 1,200.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="035">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P28.jpg" alt="Vegetable Lamprais" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Vegetable Lamprais with Cashew</p><div class="price-wrapper"><span class="price">Rs. 1,200.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="036">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P31.jpg" alt="Lamprais Bundle 6" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chicken Lamprais Bundle Pack – 6 Portions</p><div class="price-wrapper"><span class="price">Rs. 11,900.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="037">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P30.jpg" alt="Biryani Sawan" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Chicken Biryani Sawan with Watalappan</p><div class="price-wrapper"><span class="price">Rs. 15,150.00 </span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="038">Add to cart</button></div></div>
+    </div>
+  </section>
+
+  <!-- ── BEVERAGES ── -->
+  <section id="beverages" class="category-anchor category-section" style="background:#fff;">
+    <div class="container">
+      <div class="section-header"><h2>Beverages</h2></div>
+      <div class="products-grid">
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P10.png" alt="Ice Coffee" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Ice Coffee</p><div class="price-wrapper"><span class="price">Rs. 350.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="039">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P15.png" alt="Fruit Juice" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Fruit Juice</p><div class="price-wrapper"><span class="price">Rs. 300.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="040">Add to cart</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Cheesecake and Bentocake ── -->
+  <section id="cheesecakeandbentocake" class="category-anchor category-section" style="background:#faf4ec;">
+  <div class="container">
+    <div class="section-header"><h2>Cheesecake and Bentocake</h2></div>
+    <div class="products-grid">
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P13.jpg" alt="Strawberry Cream Cheesecake" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Strawberry Cream Cheesecake</p><div class="price-wrapper"><span class="price">Rs. 5,700.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="041">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P14.jpg" alt="Blueberry Cream Cheesecake" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Blueberry Cream Cheesecake</p><div class="price-wrapper"><span class="price">Rs. 5,700.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="042">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P16.webp" alt="Bento Cake – BC-R-001" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Bento Cake – BC-R-001</p><div class="price-wrapper"><span class="price">Rs. 1,600.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="043">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P17.webp" alt="Bento Cake – BC-R-002" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Bento Cake – BC-R-002</p><div class="price-wrapper"><span class="price">Rs. 1,600.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="044">Add to cart</button></div></div>
+        <div class="product-small box"><div class="box-image"><img src="../ALL PRODUCTS/Products Photos/P26.webp" alt="Bento Cake – BC-R-003" loading="lazy" /></div><div class="box-text text-center"><p class="product-title">Bento Cake – BC-R-003</p><div class="price-wrapper"><span class="price">Rs. 1,600.00</span></div><button class="button primary is-small ajax_add_to_cart" data-product_id="045">Add to cart</button></div></div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+     FOOTER — reusable across all pages
+═══════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand & Contact -->
+      <div>
+        <div class="footer-logo-text"> <img src="../ALL PRODUCTS/Common Photos/Logo without Background.png" alt="logo" width="100" height=""><span class="logo-text">Ceylon <span>Crumbs</span></span> </div>
+        <p class="footer-about">
+          Ceylon Crumbs (Pvt) Ltd,<br />
+          29, Aththidiya Rd,<br />
+          Piliyandala 10390,<br />
+          Sri Lanka.
+        </p>
+        <div class="footer-contact">
+          <a href="tel:+94112058977" class="btn btn-primary btn-sm">📞 Call us</a>
+          <a href="mailto:hello@ceyloncrumbs.lk" class="btn btn-outline btn-sm" style="border-color:#C9933A;color:#C9933A;"> ✉ Email</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Company Links -->
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../ABOUT/about.html">About</a></li>
+          <li><a href="../OUTLETS/outlets.html">Outlets</a></li>
+          <li><a href="../CONTACT/contact.html">Contact</a></li>
+           <li><a href="../FAQ/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+
+      <div>
+        <h4>My Account</h4>
+        <ul>
+          <li><a href="../ACCOUNT/account.html">My Details</a></li>
+          <li><a href="my-orders.html">My Orders</a></li>
+          <li><a href="../CART/cart.html">My Cart</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+   
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ceylon Crumbs. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/"  target="_blank" rel="noopener nofollow" ><img src="../ALL PRODUCTS/Common Photos/FB logo.webp" alt="FB LOGO" width="35px" height="35px"></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener nofollow"><img src="../ALL PRODUCTS/Common Photos/IG LOGO.webp" alt="IG LOGO" width="35PX" height="35px"> </a>
+      </div>
+      <div>
+        <a href="terms.html" style="color:#7A6A5A; font-size:12px; margin-right:12px;">Terms</a>
+        <a href="privacy.html" style="color:#7A6A5A; font-size:12px;">Privacy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+<div id="cart-toast" role="status" aria-live="polite"></div>
+
+<style>
+  @media (max-width: 640px) { .hide-for-medium { display: none !important; } }
+  @media (min-width: 641px) { .show-for-small  { display: none !important; } }
+</style>
+
+<script src="all-products.js"></script>
+</body>
+</html>
+
+
+  

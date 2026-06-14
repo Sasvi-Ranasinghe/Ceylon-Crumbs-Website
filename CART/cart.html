@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ceylon Crumbs</title>
+  <link rel="icon" href="../Home page Photos/Logo without Background.png" type="image/jpeg" />
+  <meta name="description" content="Order the finest cakes, gateaux, pastries, lamprais and more from Ceylon Crumbs" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../ALL PRODUCTS/all-prodcuts.css" />
+  <link rel="stylesheet" href="cart.css" />
+
+</head>
+<body class="woocommerce-js"> 
+
+  <div id="announcement-bar">
+  &nbsp; Free islandwide delivery on orders over Rs.&nbsp;10,000
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html" title="Ceylon Crumbs">
+          <img
+            src="../Home page Photos/LOGO.png" alt="Ceylon Crumbs logo"
+            onerror="this.style.display='none'"
+          />
+          <span class="logo-text">Ceylon <span>Crumbs</span></span>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main navigation">
+        <ul class="desktop-nav">
+
+          <li><a href="../index.html">Home</a></li>
+
+         <li class="has-dropdown">
+  <a href="../ALL PRODUCTS/all-products.html">All Products ▾</a>
+  <ul class="nav-dropdown">
+    <li><a href="../ALL PRODUCTS/all-products.html#savoury">Savoury</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#cake">Cake</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#gateau">Gateau</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#sweet">Sweet</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#lunch">Lunch</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#beverages">Beverages</a></li>
+    <li><a href="../ALL PRODUCTS/all-products.html#cheesecake">Cheesecake and Bentocake</a></li>
+</li>
+</ul>
+        </li>
+          <li><a href="../ABOUT/about.html">About</a></li>
+          <li><a href="../OUTLETS/outlets.html">Outlets</a></li>
+          <li><a href="../CONTACT/contact.html">Contact</a></li>
+           <li><a href="../FAQ/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Icons -->
+      <div class="header-icons">
+
+        <!-- Search -->
+        <div class="search-wrap">
+          <button id="search-toggle" class="icon-btn" aria-label="Search">
+            <img src="../Home page Photos/Search Bar.png" alt="search" width="20" height="20" />
+          </button>
+          <div id="search-box" class="search-box">
+            <form action="../ALL PRODUCTS/all-products.html" method="get">
+              <div class="search-row">
+                <input type="search" name="s" placeholder="Search products…" />
+                <button type="submit">
+                  <img src="../Home page Photos/Search Bar.png" alt="search" width="16" height="16" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- My Account -->
+        <a href="../ACCOUNT/account.html" class="icon-btn" aria-label="My Account">
+          <img src="../Home page Photos/Login.png" alt="login" width="20" height="20" />
+        </a>
+
+        <!-- Cart (active page) -->
+          <a href="cart.html" class="icon-btn cart-icon-btn active-icon" aria-label="Cart">
+            <img src="../Home page Photos/images.png" alt="cart" width="20" height="20"
+                 onerror="this.outerHTML='🛒'" />
+            <span class="cart-badge cart-count" style="display:none;">0</span>
+          </a>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Your Cart</h1>
+      <p>Review your selected items before checkout.</p>
+      <p class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>»</span>
+        <strong>Cart</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main id="main">
+    <div class="container cart-container">
+
+      <!-- ── EMPTY CART STATE ── -->
+      <div class="empty-cart" id="emptyCart" style="display:none;">
+        <div class="empty-cart-icon">🛒</div>
+        <h2>Your cart is currently empty.</h2>
+        <p>Explore our delicious range and find your next favourite treat.</p>
+        <a href="../ALL PRODUCTS/all-products.html" class="btn btn-primary">
+          Shop Now
+        </a>
+      </div>
+
+      <!-- ── CART CONTENT ── -->
+      <div class="cart-layout" id="cartContent">
+
+        <!-- Left: Cart Items -->
+        <div class="cart-items-section">
+
+          <div class="cart-items-header">
+            <h2>Cart Items</h2>
+            <span class="item-count" id="itemCount">0 items</span>
+          </div>
+
+          <!-- Cart Items List (dynamically rendered) -->
+          <div id="cartItemsList">
+            <!-- Items injected by cart.js -->
+          </div>
+
+          <!-- Cart Actions -->
+          <div class="cart-actions">
+            <a href="../ALL PRODUCTS/all-products.html" class="btn btn-outline">
+              ← Continue Shopping
+            </a>
+            <button class="btn btn-secondary" id="updateCartBtn">
+            <img src="CP1.jpg" alt="car" width="20px" height="20px"> Update Cart
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right: Order Summary -->
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Total Items</span>
+            <span id="summaryItemCount">0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summarySubtotal">Rs. 0.00</span>
+          </div>
+
+          <div class="summary-note">
+            <span>🚚</span>
+            <p>Delivery charges will be calculated at checkout based on your location.</p>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row summary-total">
+            <span>Estimated Total</span>
+            <span id="summaryTotal">Rs. 0.00</span>
+          </div>
+
+          <a href="checkout.html" class="btn btn-primary btn-full" id="checkoutBtn">
+            Proceed to Checkout →
+          </a>
+
+          <div class="summary-secure">
+            🔒 Secure checkout &nbsp;|&nbsp; SSL encrypted
+          </div>
+
+          <!-- Accepted payments note -->
+          <div class="summary-payment">
+            <span>We accept:</span>
+            <img src="CP2.webp" alt="Payment accept" width="100%" height="50px"
+          </div>
+
+        </div>
+
+      </div><!-- /.cart-layout -->
+
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div>
+          <div class="footer-logo-text">
+            <img src="../Home page Photos/Logo without Background.png" alt="Ceylon Crumbs" width="60"
+                 onerror="this.style.display='none'" />
+            <span>Ceylon <span>Crumbs</span></span>
+          </div>
+          <p class="footer-about">
+            Ceylon Crumbs (Pvt) Ltd,<br />
+            29, Aththidiya Rd,<br />
+            Piliyandala 10390,<br />
+            Sri Lanka.
+          </p>
+          <div class="footer-contact">
+            <a href="tel:+94112058977" class="btn-call">📞 Call us</a>
+            <a href="mailto:hello@ceyloncrumbs.lk" class="btn-email">✉ Email</a>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../ABOUT/about.html">About Us</a></li>
+            <li><a href="../OUTLETS/outlets.html">Outlets</a></li>
+            <li><a href="../CONTACT/contact.html">Contact</a></li>
+            <li><a href="../FAQ/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- My Account -->
+        <div>
+          <h4>My Account</h4>
+          <ul>
+            <li><a href="../ACCOUNT/account.html">My Details</a></li>
+            <li><a href="my-orders.html">My Orders</a></li>
+            <li><a href="cart.html">My Cart</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+      <p>&copy; 2026 Ceylon Crumbs. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/"  target="_blank" rel="noopener nofollow" ><img src="../ALL PRODUCTS/Common Photos/FB logo.webp" alt="FB LOGO" width="35px" height="35px"></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener nofollow"><img src="../ALL PRODUCTS/Common Photos/IG LOGO.webp" alt="IG LOGO" width="35PX" height="35px"> </a>
+      </div>
+        <div>
+          <a href="terms.html" style="color:#7A6A5A;font-size:12px;margin-right:12px;">Terms</a>
+          <a href="privacy.html" style="color:#7A6A5A;font-size:12px;">Privacy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="cart-toast" role="status" aria-live="polite"></div>
+
+  <!-- Cart JS -->
+  <script src="cart.js"></script>
+</body>
+</html>

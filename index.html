@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Order the finest cakes, gateaux, pastries, lamprais and more from Ceylon Crumbs" />
+  <title>Ceylon Crumbs</title>
+  <link rel="icon" href="./Home page Photos/Logo without Background.png" type="image/jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+<div id="announcement-bar">
+  &nbsp; Free islandwide delivery on orders over Rs.&nbsp;10,000
+</div>
+
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+
+    
+      <div class="logo">
+        <a href="./index.html" title="Ceylon Crumbs">
+          
+        
+          <img
+            src="Home page Photos/LOGO.png"
+            alt="Ceylon Crumbs Logo"
+            onerror="this.style.display='none'"
+          />
+          <span class="logo-text">Ceylon <span>Crumbs</span></span>
+        </a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="desktop-nav">
+          <li class="active"><a href="./index.html">Home</a></li>
+          
+          <li class="has-dropdown">
+            <a href="./ALL PRODUCTS/all-products.html">All Products ▾</a>
+            <ul class="nav-dropdown">
+              <li><a href="./ALL PRODUCTS/all-products.html#Savoury">Savoury</a></li>
+              <li><a href="./ALL PRODUCTS/all-products.html#Cake">Cake</a></li>
+              <li><a href="./ALL PRODUCTS/all-products.html#gateau">Geteau</a></li>
+              <li><a href="./ALL PRODUCTS/all-products.html#sweet">Sweet</a></li>
+              <li><a href="./ALL PRODUCTS/all-products.html#Lunch">Lunch</a></li>
+              <li><a href="./ALL PRODUCTS/all-products.html#beverages">Beverages</a></li>
+              <li><a href="./ALL PRODUCTS/all-products.html#Cheesecake and Bentocake">Cheesecake and Bentocake</a></li>
+            </ul>
+          </li>
+
+          <li><a href="./ABOUT/about.html">About</a></li>
+          <li><a href="./OUTLETS/outlets.html">Outlets</a></li>
+          <li><a href="./CONTACT/contact.html">Contact</a></li>
+          <li><a href="./FAQ/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+
+
+        <div class="search-wrap" style="position:relative;">
+          <button id="search-toggle" class="icon-btn" aria-label="Search"> <img src="./Home page Photos/Search Bar.png" alt="search" width="20" height="20"></button>
+          
+
+          <div id="search-box" class="search-box" role="search">
+            <form action="./ALL PRODUCTS/all-products.html" method="get">
+              <div class="search-row">
+                <input
+                  type="search"
+                  name="s"
+                  placeholder="Search products…"
+                  aria-label="Search products"
+                />
+                <button type="submit" aria-label="Submit search"> <img src="./Home page Photos/Search Bar.png" alt="search" width="20" height="20"></button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- My Account -->
+        <a href="./ACCOUNT/account.html" class="icon-btn" aria-label="My Account"> <img src="./Home page Photos/Login.png" alt="login" width="20" height="20"></a>
+
+        <!-- Cart with badge -->
+        <a href="./CART/cart.html" class="icon-btn cart-icon-btn" aria-label="View cart" style="position:relative;">
+          <img src="./Home page Photos/images.png" alt="cart" width="20" height="20">
+
+          <!-- Badge updated dynamically via JS from localStorage -->
+          <span class="cart-badge cart-count" style="display:none;">0</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+
+
+  <!-- ─────────────────────────────────────────────────────
+       1. HERO SLIDER — Desktop
+  ───────────────────────────────────────────────────────── -->
+  <div class="hide-for-medium"><!-- shown on screens ≥ 641 px -->
+    <div class="hero-slider" id="hero-desktop" aria-label="Featured products slideshow">
+
+      <div class="hero-slides">
+
+        <!-- Slide 1 – Christmas / Seasonal -->
+        <div class="hero-slide">
+          <a href="./ALL PRODUCTS/all-products.html#seasonal">
+            <img
+              src="./Home page Photos/Hero Slider 1.png"
+              alt="Seasonal Collection"
+              loading="eager"
+            />
+          </a>
+        </div>
+
+        <!-- Slide 2 – Savoury -->
+        <div class="hero-slide">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img
+              src="./Home page Photos/Hero Slider 3.png"
+              alt="Savoury Range"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <!-- Slide 3 – Gateaux -->
+        <div class="hero-slide">
+          <a href="./ALL PRODUCTS/all-products.html#gateau">
+            <img
+              src="./Home page Photos/Hero Slider 2.png"
+              alt="Gateaux Collection"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <!-- Slide 4 – Lamprais -->
+        <div class="hero-slide">
+          <a href=" ./ALL PRODUCTS/all-products.html#lunch">
+            <img
+              src="./Home page Photos/Hero Slider 4.png"
+              alt="Lamprais"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <!-- Slide 5 – Biryani -->
+        <div class="hero-slide">
+          <a href="./ALL PRODUCTS/all-products.html#lunch">
+            <img
+              src="Home page Photos/Hero Slider 5.png"
+              alt="Chicken Biryani"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Navigation arrows -->
+      <button class="slider-arrow prev" aria-label="Previous slide">&#8249;</button>
+      <button class="slider-arrow next" aria-label="Next slide">&#8250;</button>
+
+      <!-- Dot indicators (one per slide) -->
+      <div class="slider-dots" aria-hidden="true">
+        <button class="slider-dot active"></button>
+        <button class="slider-dot"></button>
+        <button class="slider-dot"></button>
+        <button class="slider-dot"></button>
+        <button class="slider-dot"></button>
+      </div>
+
+    </div><!-- /#hero-desktop -->
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────
+       2. POPULAR ITEMS
+  ───────────────────────────────────────────────────────── -->
+  <section class="section-parchment" aria-labelledby="popular-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="popular-heading">Popular Items</h2>
+        <a href="./ALL PRODUCTS/all-products.html" class="btn btn-outline btn-sm">View All &rsaquo;</a>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Card: Chicken Lamprais -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#lunch">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P 1.jpg"
+              alt="Chicken Lamprais"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken Lamprais</p>
+            <p class="product-price">Rs. 1,200.00</p>
+            <button
+              class="btn btn-primary btn-sm atc-btn"
+              data-product_id="035"
+              data-name="Chicken Lamprais"
+              data-price="Rs. 1,200.00"
+            >Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Card: Chicken Roll -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P 2.jpg"
+              alt="Chicken Roll"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken Roll</p>
+            <p class="product-price">Rs. 210.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="001" data-name="Chicken Roll" data-price="Rs. 210.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Card: Fish Roll -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P 5.jpg"
+              alt="Fish Roll"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Fish Roll</p>
+            <p class="product-price">Rs. 220.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="5480" data-name="Fish Roll" data-price="Rs. 220.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Card: Chocolate Fudge Cake (sale) -->
+        <article class="product-card">
+          <span class="badge">Sale!</span>
+          <a href="./ALL PRODUCTS/all-products.html#cake">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P 6.webp"
+              alt="Chocolate Fudge Cake"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chocolate Fudge Cake </p>
+            <p class="product-price">Rs. 2,050.00 – Rs. 8,000.00</p>
+            <a href="./ALL PRODUCTS/all-products.html#cake" class="btn btn-primary btn-sm">Select Options</a>
+          </div>
+        </article>
+
+        <!-- Card: Ice Coffee -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#beverages">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P10.png"
+              alt="Ice Coffee"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Ice Coffee</p>
+            <p class="product-price">Rs. 350.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="039" data-name="Ice Coffee" data-price="Rs. 350.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Card: Crispy Chicken Quiche -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P 4.jpg"
+              alt="Crispy Chicken Quiche"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Crispy Chicken Quiche</p>
+            <p class="product-price">Rs. 200.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="002" data-name="Crispy Chicken Quiche" data-price="Rs. 200.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Card: Vegetable Samosa -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P 8.jpg"
+              alt="Vegetable Samosa"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Vegetable Samosa</p>
+            <p class="product-price">Rs. 200.00</p>
+            <button class="btn btn-primary btn-sm atc-btn"  data-product_id="007" data-name="Vegetable Samosa" data-price="Rs. 200.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Card: Ribbon Cake Slice -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#cake">
+            <img class="product-image"
+              src="./ALL PRODUCTS/Products Photos/P 9.webp"
+              alt="Ribbon Cake Slice"
+              loading="lazy"
+            />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Ribbon Cake Slice</p>
+            <p class="product-price">Rs. 240.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="022" data-name="Ribbon Cake Slice" data-price="Rs. 240.00">Add to cart</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────
+       3. CAKES
+  ───────────────────────────────────────────────────────── -->
+  <section id="cake" class="section-white" aria-labelledby="cakes-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="cakes-heading">Cakes</h2>
+        <a href="./ALL PRODUCTS/all-products.html#cake" class="btn btn-outline btn-sm">View All &rsaquo;</a>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Chocolate Fudge Cake (sale) -->
+        <article class="product-card">
+          <span class="badge">Sale!</span>
+          <a href="./ALL PRODUCTS/all-products.html#cake">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P 6.webp" alt="Chocolate Fudge Cake" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chocolate Fudge Cake</p>
+            <p class="product-price">Rs. 2,050.00 – Rs. 8,000.00</p>
+            <a href="./ALL PRODUCTS/all-products.html#cake" class="btn btn-primary btn-sm">Select Options</a>
+          </div>
+        </article>
+
+        <!-- Coffee & Chocolate Fudge Cake (sale) -->
+        <article class="product-card">
+          <span class="badge">Sale!</span>
+          <a href="./ALL PRODUCTS/all-products.html#cake">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P32.jpg" alt="Coffee & Chocolate Fudge Cake" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Coffee &amp; Chocolate Fudge Cake</p>
+            <p class="product-price">Rs. 2,200.00 – Rs. 8,200.00</p>
+            <a href="./ALL PRODUCTS/all-products.html#cake" class="btn btn-primary btn-sm">Select Options</a>
+          </div>
+        </article>
+
+        <!-- Love Cake -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/Products Photos/P34.jpeg">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P34.jpeg" alt="Love Cake" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Love Cake 400gr</p>
+            <p class="product-price">Rs. 1,950.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="016" data-name="Love Cake 400gr" data-price="Rs. 1,950.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Butter Cake -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#cake">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P35.jpg" alt="Butter Cake" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Butter Cake</p>
+            <p class="product-price">Rs. 1,250.00 – Rs. 2,400.00</p>
+            <a href="./ALL PRODUCTS/all-products.html#cake" class="btn btn-primary btn-sm">Select Options</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────
+       4. GATEAUX
+  ───────────────────────────────────────────────────────── -->
+  <section id="gateau" class="section-parchment" aria-labelledby="gateau-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="gateau-heading">Gateaux</h2>
+        <a href="./ALL PRODUCTS/all-products.html#gateau" class="btn btn-outline btn-sm">View All &rsaquo;</a>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Chocolate Pyramid Gateau Slice -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#gateau">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P11.webp" alt="Chocolate Pyramid Gateau Slice" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chocolate Pyramid Gateau Slice</p>
+            <p class="product-price">Rs. 240.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="029" data-name="Chocolate Pyramid Gateau Slice" data-price="Rs. 240.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Chocolate Gateau -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#gateau">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P18.webp" alt="Chocolate Gateau" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chocolate Gateau</p>
+            <p class="product-price">Rs. 4,800.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="027" data-name="Chocolate Gateau" data-price="Rs. 4,800.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Black Forest Gateau -->
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#gateau">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P19.jpg" alt="Black Forest Gateau" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Black Forest Gateau</p>
+            <p class="product-price">Rs. 5,700.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="028" data-name="Black Forest Gateau" data-price="Rs. 5,700.00">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Luxe: Espresso Dream Tiramisu -->
+        <article class="product-card">
+          <!--
+            Luxe badge highlights premium items visually
+            using the gold variant of the badge class
+          -->
+          <span class="badge badge-luxe">✦ Luxe</span>
+          <a href="./ALL PRODUCTS/all-products.html">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/p20.png" alt="Espresso Dream Tiramisu Gateau" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Espresso Dream – Tiramisu Gateau</p>
+            <p class="product-price">Rs. 3,150.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="028" data-name="Espresso Dream Tiramisu Gateau" data-price="Rs. 3,150.00">Add to cart</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────
+       5. SAVOURY
+  ───────────────────────────────────────────────────────── -->
+  <section id="savoury" class="section-white" aria-labelledby="savoury-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="savoury-heading">Savoury</h2>
+        <a href="./ALL PRODUCTS/all-products.html#savoury" class="btn btn-outline btn-sm">View All &rsaquo;</a>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P 2.jpg" alt="Chicken Roll" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken Roll</p>
+            <p class="product-price">Rs. 210.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="001" data-name="Chicken Roll" data-price="Rs. 210.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P 5.jpg" alt="Fish Roll" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Fish Roll</p>
+            <p class="product-price">Rs. 220.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="5480" data-name="Fish Roll" data-price="Rs. 220.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P21.jpg" alt="Chicken Patty" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken Patty</p>
+            <p class="product-price">Rs. 190.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="003"  data-name="Chicken Patty" data-price="Rs. 190.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#savoury">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P22.jpg" alt="Chicken & Mushroom Pie" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken &amp; Mushroom Pie</p>
+            <p class="product-price">Rs. 220.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="004" data-name="Chicken &amp; Mushroom Pie" data-price="Rs. 220.00">Add to cart</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────
+       6. SWEET
+  ───────────────────────────────────────────────────────── -->
+  <section id="sweet" class="section-parchment" aria-labelledby="sweet-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="sweet-heading">Sweet</h2>
+        <a href="./ALL PRODUCTS/all-products.html#sweet" class="btn btn-outline btn-sm">View All &rsaquo;</a>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#sweet">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P23.webp" alt="Chocolate Fudge Donut" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chocolate Fudge Donut</p>
+            <p class="product-price">Rs. 260.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="032" data-name="Chocolate Fudge Donut" data-price="Rs. 260.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#sweet">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P24.png" alt="Chocolate Éclair" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chocolate Éclair</p>
+            <p class="product-price">Rs. 270.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="033" data-name="Chocolate Éclair" data-price="Rs. 270.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#sweet">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P25.jpg" alt="Almond Tart" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Almond Tart</p>
+            <p class="product-price">Rs. 300.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="5523" data-name="Almond Tart" data-price="Rs. 300.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#sweet">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P27.jpg" alt="Strawberry Cream Donut" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Strawberry Cream Donut</p>
+            <p class="product-price">Rs. 250.00</p>
+            <button class="btn btn-primary btn-sm atc-btn"  data-product_id="034"  data-name="Strawberry Cream Donut" data-price="Rs. 250.00">Add to cart</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────
+       7. LUNCH
+  ───────────────────────────────────────────────────────── -->
+  <section id="lunch" class="section-white" aria-labelledby="lunch-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="lunch-heading">Lunch</h2>
+        <a href="./ALL PRODUCTS/all-products.html#lunch" class="btn btn-outline btn-sm">View All &rsaquo;</a>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#lunch">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P 1.jpg" alt="Chicken Lamprais" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken Lamprais</p>
+            <p class="product-price">Rs. 1,200.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="035" data-name="Chicken Lamprais" data-price="Rs. 1,200.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#lunch">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P28.jpg" alt="Vegetable Lamprais" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Vegetable Lamprais with Cashew</p>
+            <p class="product-price">Rs. 1,200.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="036" data-name="Vegetable Lamprais with Cashew" data-price="Rs. 1,200.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#lunch">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P30.jpg" alt="Chicken Biryani Sawan" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken Biryani Sawan with Watalappan</p>
+            <p class="product-price">Rs. 15,150.00 </p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="038" data-name="Chicken Biryani Sawan with Watalappan" data-price="Rs. 15,150.00">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="./ALL PRODUCTS/all-products.html#lunch">
+            <img class="product-image" src="./ALL PRODUCTS/Products Photos/P31.jpg" alt="Chicken Lamprais 4 Pack" loading="lazy" />
+          </a>
+          <div class="product-body">
+            <p class="product-name">Chicken Lamprais – 4 Portions</p>
+            <p class="product-price">Rs. 5,800.00</p>
+            <button class="btn btn-primary btn-sm atc-btn" data-product_id="037" data-name="Chicken Lamprais – 4 Portions" data-price="Rs. 5,800.00">Add to cart</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+</main><!-- /#main -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER — reusable across all pages
+═══════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand & Contact -->
+      <div>
+        <div class="footer-logo-text"> <img src="./Home page Photos/Logo without Background.png" alt="logo" width="100" height=""><span class="logo-text">Ceylon <span>Crumbs</span></span> </div>
+        <p class="footer-about">
+          Ceylon Crumbs (Pvt) Ltd,<br />
+          29, Aththidiya Rd,<br />
+          Piliyandala 10390,<br />
+          Sri Lanka.
+        </p>
+        <div class="footer-contact">
+          <a href="tel:+94112058977" class="btn btn-primary btn-sm">📞 Call us</a>
+          <a href="./CONTACT/contact.html" class="btn btn-outline btn-sm" style="border-color:#C9933A;color:#C9933A;">✉ Email</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Company Links -->
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="./ABOUT/about.html">About</a></li>
+          <li><a href="./OUTLETS/outlets.html">Outlets</a></li>
+          <li><a href="./CONTACT/contact.html">Contact</a></li>
+           <li><a href="./FAQ/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Account Links -->
+      <div>
+        <h4>My Account</h4>
+        <ul>
+          <li><a href="./ACCOUNT/account.html">My Details</a></li>
+          <li><a href="./ACCOUNT/account.html">My Orders</a></li>
+          <li><a href="./CART/cart.html">My Cart</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer-grid -->
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ceylon Crumbs. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/"  target="_blank" rel="noopener nofollow" ><img src="./Home page Photos/FB logo.webp" alt="FB LOGO" width="35px" height="35px"></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener nofollow"><img src="./Home page Photos/IG LOGO.webp" alt="IG LOGO" width="35PX" height="35px"> </a>
+      </div>
+      <div>
+        <a href="terms.html" style="color:#7A6A5A; font-size:12px; margin-right:12px;">Terms</a>
+        <a href="privacy.html" style="color:#7A6A5A; font-size:12px;">Privacy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CART TOAST NOTIFICATION
+     Appears bottom-right when item is added
+═══════════════════════════════════════════════════════ -->
+<div id="cart-toast" role="status" aria-live="polite"></div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     RESPONSIVE VISIBILITY HELPERS (inline — no extra file)
+═══════════════════════════════════════════════════════ -->
+<style>
+  @media (max-width: 640px) { .hide-for-medium { display: none !important; } }
+  @media (min-width: 641px) { .show-for-small  { display: none !important; } }
+</style>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════════ -->
+<script src="index.js"></script>
+
+</body>
+</html>
