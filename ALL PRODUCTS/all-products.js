@@ -1,6 +1,5 @@
 
 /* ── Cart Utilities ──────────────────────────────────────── */
-
 function getCart() {
   try {
     return JSON.parse(localStorage.getItem('ceylonCrumbsCart')) || [];
@@ -163,7 +162,7 @@ function initAddToCart() {
     if (!btn) return;
 
     var card    = btn.closest('.box, .product-card, .product-small');
-    var nameEl  = card ? card.querySelector('.product-title, .product-name, .product-titile') : null;
+    var nameEl  = card ? card.querySelector('.product-title, .product-name') : null;
     var priceEl = card ? card.querySelector('.price, .product-price') : null;
     var imgEl   = card ? card.querySelector('img') : null;
 
@@ -204,6 +203,9 @@ if(weightSel){
   name,
   price,
   imgSrc,
+
+
+
   category,
   weight
 );
@@ -239,60 +241,67 @@ function initSelectOptions() {
     }
 
   });
+}
 
-function sortProducts(sortType) {
+/* ── Sorting Functionality ───────────────────────────────── */
 
-  document.querySelectorAll('.products-grid').forEach(function(grid) {
+function sortProducts(sortType){
+
+  document.querySelectorAll('.products-grid').forEach(function(grid){
 
     const cards = Array.from(
       grid.querySelectorAll('.product-small.box')
     );
 
-    cards.sort(function(a, b) {
+    cards.sort(function(a,b){
 
-      const nameA = a.querySelector('.product-title')
-        ? a.querySelector('.product-title').textContent.trim().toLowerCase()
-        : '';
+      const nameA =
+        (a.querySelector('.product-title')?.textContent || '')
+        .trim()
+        .toLowerCase();
 
-      const nameB = b.querySelector('.product-title')
-        ? b.querySelector('.product-title').textContent.trim().toLowerCase()
-        : '';
+      const nameB =
+        (b.querySelector('.product-title')?.textContent || '')
+        .trim()
+        .toLowerCase();
 
-      const priceA = parseFloat(
-        (a.querySelector('.price')?.textContent || '0')
-          .replace(/Rs\./g, '')
-          .replace(/,/g, '')
-      ) || 0;
+      const priceA =
+        parseFloat(
+          (a.querySelector('.price')?.textContent || '0')
+          .replace(/Rs\./g,'')
+          .replace(/,/g,'')
+        ) || 0;
 
-      const priceB = parseFloat(
-        (b.querySelector('.price')?.textContent || '0')
-          .replace(/Rs\./g, '')
-          .replace(/,/g, '')
-      ) || 0;
+      const priceB =
+        parseFloat(
+          (b.querySelector('.price')?.textContent || '0')
+          .replace(/Rs\./g,'')
+          .replace(/,/g,'')
+        ) || 0;
 
-      if (sortType === 'price-asc') {
+      if(sortType === 'price-asc'){
         return priceA - priceB;
       }
 
-      if (sortType === 'price-desc') {
+      if(sortType === 'price-desc'){
         return priceB - priceA;
       }
 
-      if (sortType === 'name-asc') {
+      if(sortType === 'name-asc'){
         return nameA.localeCompare(nameB);
       }
 
       return 0;
     });
 
-    cards.forEach(function(card) {
+    cards.forEach(function(card){
       grid.appendChild(card);
     });
 
   });
 
 }
-
+      
   /* Handle product card clicks for detail page navigation */
   document.addEventListener('click', function(e) {
     var card = e.target.closest('.product-card');
@@ -322,7 +331,7 @@ function sortProducts(sortType) {
     /* Navigate to product detail page */
     window.location.href = '../PRODUCT/product-detail.html';
   });
-}
+
 
 /* ── Filter Bar ──────────────────────────────────────────── */
 
@@ -365,8 +374,6 @@ function initSmoothScroll() {
   });
 }
 
-
-
 /* ── Init ────────────────────────────────────────────────── */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -381,3 +388,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+const sortSelect = document.getElementById('sort-select');
+
+if (sortSelect) {
+  sortSelect.addEventListener('change', function () {
+    sortProducts(this.value);
+  });
+}
