@@ -506,14 +506,34 @@ button { cursor: pointer; font-family: var(--font-body); }
     gap: 12px;
   }
 
+  .header-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
   .logo img {
-    height: 70px;
+    height: 100px;
   }
 
   /* BIGGER logo text */
   .logo-text {
-    font-size: 24px;
+    font-size: 32px;
   }
+
+  .logo{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.logo a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
 
   /* NAVBAR WRAPS */
   .desktop-nav {
