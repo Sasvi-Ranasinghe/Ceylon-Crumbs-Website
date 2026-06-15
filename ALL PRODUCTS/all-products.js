@@ -240,6 +240,61 @@ function initSelectOptions() {
 
   });
 
+function sortProducts(sortType) {
+
+  document.querySelectorAll('.products-grid').forEach(function(grid) {
+
+    const cards = Array.from(
+      grid.querySelectorAll('.product-small.box')
+    );
+
+    cards.sort(function(a, b) {
+
+      const nameA = a.querySelector('.product-title')
+        ? a.querySelector('.product-title').textContent.trim().toLowerCase()
+        : '';
+
+      const nameB = b.querySelector('.product-title')
+        ? b.querySelector('.product-title').textContent.trim().toLowerCase()
+        : '';
+
+      const priceA = parseFloat(
+        (a.querySelector('.price')?.textContent || '0')
+          .replace(/Rs\./g, '')
+          .replace(/,/g, '')
+      ) || 0;
+
+      const priceB = parseFloat(
+        (b.querySelector('.price')?.textContent || '0')
+          .replace(/Rs\./g, '')
+          .replace(/,/g, '')
+      ) || 0;
+
+      if (sortType === 'price-asc') {
+        return priceA - priceB;
+      }
+
+      if (sortType === 'price-desc') {
+        return priceB - priceA;
+      }
+
+      if (sortType === 'name-asc') {
+        return nameA.localeCompare(nameB);
+      }
+
+      return 0;
+    });
+
+    cards.forEach(function(card) {
+      grid.appendChild(card);
+    });
+
+  });
+
+}
+
+
+
   /* Handle product card clicks for detail page navigation */
   document.addEventListener('click', function(e) {
     var card = e.target.closest('.product-card');
@@ -298,11 +353,6 @@ function initFilterBar() {
 }
 
 
-
-
-
-
-
 /* ── Smooth Scroll ───────────────────────────────────────── */
 
 function initSmoothScroll() {
@@ -317,6 +367,8 @@ function initSmoothScroll() {
   });
 }
 
+
+
 /* ── Init ────────────────────────────────────────────────── */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -327,6 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSelectOptions();
   initFilterBar();
   initSmoothScroll();
-  initCartButtons();
   updateCartBadge();
+
 });
+
