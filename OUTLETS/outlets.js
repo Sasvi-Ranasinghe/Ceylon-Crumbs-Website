@@ -91,11 +91,22 @@ function initSlider() {
     });
   }
 
-  /* ── Init ── */
+  /* ── Init ── */  
   document.addEventListener("DOMContentLoaded", function () {
+
     initStickyHeader();
-    initMobileMenu();
-    initDirectionLinks();
+
+    if (typeof initMobileMenu === "function") {
+        initMobileMenu();
+    }
+
+    if (typeof initDirectionLinks === "function") {
+        initDirectionLinks();
+    }
+
     initOpenNow();
+    initSlider();
+
   });
+
 })();

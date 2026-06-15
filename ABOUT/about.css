@@ -262,7 +262,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   display: inline-block;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 25px;
+  font-size: 20px;
   color: var(--gold);
   margin-bottom: 12px;
   letter-spacing: .04em;
@@ -270,7 +270,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 .about-hero-text {
   padding-left: 0;           
-  margin-left: -20px;       
+  margin-left: 0px;       
 }
 
 .about-hero-text h1 {
@@ -611,7 +611,6 @@ button { cursor: pointer; font-family: var(--font-body); }
 .social-links { display: flex; gap: 12px; }
 .social-links a { color: #C8B9A8; font-size: 13px; transition: color var(--trans); }
 .social-links a:hover { color: var(--gold); }
-
 
 
 /* ==========================================================
