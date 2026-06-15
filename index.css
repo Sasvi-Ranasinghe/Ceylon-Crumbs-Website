@@ -536,18 +536,25 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 
   /* NAVBAR WRAPS */
-  .desktop-nav {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
+  .desktop-nav{
+  width:100%;
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:center;
+  gap:4px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
 
-  /* BIGGER nav links */
-  .desktop-nav > li > a {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
+.desktop-nav::-webkit-scrollbar{
+  display:none;
+}
+
+.desktop-nav > li > a{
+  font-size:12px;
+  padding:6px 8px;
+  white-space:nowrap;
+}
 
   .header-icons {
     width: 100%;
