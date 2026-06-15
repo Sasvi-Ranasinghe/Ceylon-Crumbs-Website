@@ -545,7 +545,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 
   /* BIGGER nav links */
   .desktop-nav > li > a {
-    font-size: 15px;
+    font-size: 12px;
     padding: 8px 12px;
   }
 
