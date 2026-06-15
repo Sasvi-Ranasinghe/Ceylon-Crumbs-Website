@@ -513,13 +513,13 @@ button { cursor: pointer; font-family: var(--font-body); }
 
   #announcement-bar{
     font-size:14px;
-    padding:8px 12px;
+    padding:12px 18px;
   }
 
   .header-inner{
     flex-wrap:wrap;
     height:auto;
-    padding:12px 0;
+    padding: 16px 0;
     gap:12px;
   }
 
@@ -541,7 +541,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 
   .desktop-nav > li > a{
     font-size:12px;
-    padding:6px 8px;
+    padding:8px 10px;
   }
 
   .header-icons{
