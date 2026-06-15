@@ -257,10 +257,12 @@ button { cursor: pointer; font-family: var(--font-body); }
   position: relative;
   flex-shrink: 0;
 }
-.hero-slide img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* Dark gradient overlay on every slide */
