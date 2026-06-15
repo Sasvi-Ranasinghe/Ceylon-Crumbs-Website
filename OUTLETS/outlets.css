@@ -69,6 +69,18 @@ button { cursor: pointer; font-family: var(--font-body); }
   gap: 24px;
   height: 80px;
 }
+
+/* Logo */
+.logo a { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 80px; width: auto; object-fit: contain; }
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--espresso);
+  line-height: 1.1;
+}
+.logo-text span { color: var(--gold); }
  
 /* Logo */
 .logo a { display: flex; align-items: center; gap: 10px; }
@@ -97,7 +109,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 .desktop-nav > li { position: relative; }
 .desktop-nav > li > a {
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 600;
   color: var(--espresso);
   border-radius: 6px;

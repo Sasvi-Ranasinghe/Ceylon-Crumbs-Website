@@ -106,6 +106,9 @@ function initSlider() {
 
     initOpenNow();
     initSlider();
+    initAddToCart();
+    initCartButtons();
+    updateCartBadge();    
 
   });
 
