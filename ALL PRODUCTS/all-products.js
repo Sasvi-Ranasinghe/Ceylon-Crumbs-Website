@@ -293,8 +293,6 @@ function sortProducts(sortType) {
 
 }
 
-
-
   /* Handle product card clicks for detail page navigation */
   document.addEventListener('click', function(e) {
     var card = e.target.closest('.product-card');
